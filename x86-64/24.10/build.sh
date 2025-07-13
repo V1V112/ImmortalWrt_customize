@@ -52,12 +52,14 @@ PACKAGES="$PACKAGES luci-app-openclash"
 PACKAGES="$PACKAGES luci-i18n-homeproxy-zh-cn"
 PACKAGES="$PACKAGES openssh-sftp-server"
 PACKAGES="$PACKAGES luci-i18n-samba4-zh-cn"
+#### 原仓库基础添加 ####
+# snmpd插件针对于ikuai+op mac地址重复
 PACKAGES="$PACKAGES snmpd"
 PACKAGES="$PACKAGES openssh-sftp-server"
 # 文件管理器
 PACKAGES="$PACKAGES luci-i18n-filemanager-zh-cn"
 # 静态文件服务器dufs(推荐)
-PACKAGES="$PACKAGES luci-i18n-dufs-zh-cn"
+#PACKAGES="$PACKAGES luci-i18n-dufs-zh-cn"
 
 # ============= imm仓库外的第三方插件==============
 # ============= 若启用 则打开注释 ================
@@ -80,8 +82,8 @@ PACKAGES="$PACKAGES luci-i18n-dufs-zh-cn"
 # 酷猫主题 by sirpdboy 
 #PACKAGES="$PACKAGES luci-theme-kucat"
 # 网络测速 by sirpdboy 
-#PACKAGES="$PACKAGES luci-app-netspeedtest"
-#PACKAGES="$PACKAGES luci-i18n-netspeedtest-zh-cn"
+PACKAGES="$PACKAGES luci-app-netspeedtest"
+PACKAGES="$PACKAGES luci-i18n-netspeedtest-zh-cn"
 
 # 判断是否需要编译 Docker 插件
 if [ "$INCLUDE_DOCKER" = "yes" ]; then
